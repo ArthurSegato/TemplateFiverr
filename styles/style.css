@@ -1,0 +1,27 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+#home{
+	height: 100vh;
+	width: 100%;
+	background-image: url("../assets/background-image.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#server-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+#server-logo img {
+	width: 25%;
+}
+#menu-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
