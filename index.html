@@ -31,16 +31,46 @@
    </head>
    <body>
       <div id="home">
-         <div id="server-logo">
-            <img src="assets/server-logo.png" alt="logo-minecraft-server">
-         </div>
-         <div id="menu-bar">
-            aaaaaaaaaaaaaaaaaa
-         </div>
-         <div id="ip-bar">
-            
+         <div class="home-content">
+            <div class="home-logo">
+               <img src="assets/server-logo.png" alt="logo-minecraft-server">
+            </div>
+            <div class="home-icon-bar">
+               <div class="home-icon">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M15.47 11.293a1 1 0 10-1.415 1.414 1 1 0 001.415-1.414zM16.177 9.172a1 1 0 111.414 1.414 1 1 0 01-1.414-1.414zM19.712 11.293a1 1 0 10-1.414 1.414 1 1 0 001.414-1.414zM16.177 13.414a1 1 0 111.414 1.415 1 1 0 01-1.414-1.415zM6 13H4v-2h2V9h2v2h2v2H8v2H6v-2z"/><path fill="currentColor" fill-rule="evenodd" d="M7 5a7 7 0 000 14h10a7 7 0 100-14H7zm10 2H7a5 5 0 000 10h10a5 5 0 000-10z" clip-rule="evenodd"/></svg>
+                     <span class="home-icon-text">GAMES</span>
+               </div>
+               <div class="home-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-rule="evenodd" d="M5.792 2H1v2h3.218l2.77 12.678H7V17h13v-.248l2.193-9.661L22.531 6H6.655l-.57-2.611L5.792 2zm14.195 6H7.092l1.529 7h9.777l1.589-7z" clip-rule="evenodd"/><path fill="currentColor" d="M10 22a2 2 0 100-4 2 2 0 000 4zM19 20a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                  <span class="home-icon-text">STORE</span>
+               </div>
+               <div class="home-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="M9 6a1 1 0 000 2h6a1 1 0 100-2H9zM9 10a1 1 0 100 2h6a1 1 0 100-2H9zM13 17a1 1 0 11-2 0 1 1 0 012 0z"/><path fill="currentColor" fill-rule="evenodd" d="M4 5a3 3 0 013-3h10a3 3 0 013 3v14a3 3 0 01-3 3H7a3 3 0 01-3-3V5zm3-1h10a1 1 0 011 1v14a1 1 0 01-1 1H7a1 1 0 01-1-1V5a1 1 0 011-1z" clip-rule="evenodd"/></svg>
+                  <span class="home-icon-text">STATUS</span>
+               </div>
+               <div class="home-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="currentColor" fill-opacity=".5" d="M13 10h4v6h-4v-6z"/><path fill="currentColor" d="M11 4H7v12h4V4zM18 18H6v2h12v-2z"/></svg>
+                  <span class="home-icon-text">VOTE</span>
+               </div>
+            </div>
+            <div class="home-ip">
+               Join <span class="ip-highlight" data-playercounter-ip="mc.hypixel.net">0</span> other players on <span id="server-ip-highlight" class="ip-highlight underline" onclick="copyText()"></span>
+            </div>
          </div>
       </div>
+      <div id="games">
+         
+      </div>
+      <div id="vote">
+         
+      </div>
+      <div id="staff">
+         
+      </div>
+      <div id="status">
+         
+      </div>
       <script type="text/javascript" src="scripts/script.js"></script>
+      <script src="https://cdn.jsdelivr.net/gh/leonardosnt/mc-player-counter/dist/mc-player-counter.min.js"></script>
    </body>
 </html>
