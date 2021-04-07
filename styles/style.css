@@ -1,20 +1,29 @@
-:root{
+:root {
 	--ip-text: #F7FFF7;
 	--ip-text-highlight: #4ECDC4;
+	--home-link-text: #F7FFF7;
+	--home-link-text-hover: #4ECDC4;
+	--games-back-color: #e8e8e8;
+	--vote-back-color: #252525;
+	--card-back-color: #353535;
 	--logo-size: 20%;
 	--icon-size: 8vw;
 	--icon-padding: 1vw;
 	--icon-font-size: 1.5vw;
 	--home-ip-font-size: 2vw;
+	--games-title-size: 3vw;
+	--games-margin: 5vh;
+	--card-margin: 1vw;
+	--card-margin-bottom: 1vw;
 }
 * {
 	padding: 0;
 	margin: 0;
 }
-html{
+html {
 	font-family: "Open Sans", Helvetica;
 }
-#home{
+#home {
 	height: 100vh;
 	width: 100%;
 	background-image: linear-gradient(rgba(20, 26, 35,0.55),rgba(20, 26, 35, 0.55)), url("../assets/background-image.jpg");
@@ -31,28 +40,35 @@ html{
 .home-logo img {
 	width: var(--logo-size);
 }
-.home-icon-bar{
+.home-icon-bar {
 	padding-bottom: 5vh;
 }
-.home-icon{
+.home-icon {
 	display: inline-block;
 	width: var(--icon-size);
 	color: var(--ip-text);
 	padding-left: var(--icon-padding);
 	padding-right: var(--icon-padding);
 }
-.home-icon-text{
+.home-text-link {
+	color: var(--home-link-text);
+	text-decoration: none;
+}
+.home-text-link:hover {
+	color: var(--home-link-text-hover);
+	transition-duration: 0.5s;
+}
+.home-icon-text {
 	font-size: var(--icon-font-size);
 	font-weight: 600;
-	color: var(--ip-text);
 }
-.home-ip{
+.home-ip {
 	color: var(--ip-text);
 	letter-spacing: 0.5px;
 	font-size: var(--home-ip-font-size);
 	display: inline-block;
 }
-.ip-highlight{
+.ip-highlight {
 	color: var(--ip-text-highlight);
 	font-weight: 600;
 }
@@ -66,6 +82,47 @@ html{
 .underline:hover {
 	background-image: linear-gradient(-90deg, #FF416C, #FF4B2B);
 }
+#games {
+	background-color: var(--games-back-color);
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
+}
+.games-title {
+	text-align: center;
+	letter-spacing: 1vw;
+	font-weight: 100;
+	font-size: var(--games-title-size);
+}
+.games-margin {
+	margin-top: var(--games-margin);
+}
+.card-margin {
+	margin-right: var(--card-margin);
+	margin-left: var(--card-margin);
+	margin-bottom: var(--card-margin-bottom) !important;
+}
+#vote{
+	background-color: var(--vote-back-color);
+	color: var(--ip-text);
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
+}
+.vote-title {
+	text-align: center;
+	letter-spacing: 1vw;
+	font-weight: 100;
+	font-size: var(--games-title-size);
+}
+.vote-margin {
+	margin-top: var(--games-margin);
+	margin-bottom: var(--games-margin);
+}
+.card-back-color {
+	background-color: var(--card-back-color) !important;
+}
+.vote-card-margin{
+	margin-bottom: var(--card-margin-bottom) !important;
+}
 @media (orientation : portrait) {
 	:root{
 	--logo-size: 50%;
@@ -73,5 +130,7 @@ html{
 	--icon-padding: 3vw;
 	--icon-font-size: 3vw;
 	--home-ip-font-size: 4.5vw;
+	--games-title-size: 8vw;
+	--card-margin-bottom: 4vw;
 	}
 }
