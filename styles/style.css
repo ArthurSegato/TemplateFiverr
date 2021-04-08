@@ -1,12 +1,15 @@
 :root {
-	--ip-text: #F7FFF7;
-	--ip-text-highlight: #4ECDC4;
-	--home-link-text: #F7FFF7;
-	--home-link-text-hover: #4ECDC4;
-	--games-back-color: #e8e8e8;
-	--vote-back-color: #252525;
-	--card-back-color: #353535;
+	--white: #F7FFF7;
+	--highlight: #00cec9;
+	--light-gray: #e8e8e8;
+	--dark: #252525;
+	--light-dark: #353535;
+	--gradient1: #FF416C;
+	--gradient2: #FF4B2B;
+	--server-on: #27ae60;
+	--server-off: #e74c3c;
 	--logo-size: 20%;
+	--logo-padding: 3vw;
 	--icon-size: 8vw;
 	--icon-padding: 1vw;
 	--icon-font-size: 1.5vw;
@@ -20,6 +23,7 @@
 @media (orientation: portrait) {
 	:root {
 		--logo-size: 50%;
+		--logo-padding: 5vh;
 		--icon-size: 16vw;
 		--icon-padding: 3vw;
 		--icon-font-size: 3vw;
@@ -38,9 +42,20 @@ html {
 	font-family: "Open Sans", Helvetica;
 }
 
+.h2-title {
+	text-align: center;
+	letter-spacing: 1vw;
+	font-weight: 100;
+	font-size: var(--games-title-size);
+}
+
+.container-padding {
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
+}
+
 #home {
 	height: 100vh;
-	width: 100%;
 	background-image: linear-gradient(rgba(20, 26, 35, 0.55), rgba(20, 26, 35, 0.55)), url("../assets/background-image.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -56,6 +71,7 @@ html {
 
 .home-logo img {
 	width: var(--logo-size);
+	padding-bottom: var(--logo-padding);
 }
 
 .home-icon-bar {
@@ -65,18 +81,17 @@ html {
 .home-icon {
 	display: inline-block;
 	width: var(--icon-size);
-	color: var(--ip-text);
 	padding-left: var(--icon-padding);
 	padding-right: var(--icon-padding);
 }
 
-.home-text-link {
-	color: var(--home-link-text);
+.home-icon-link {
+	color: var(--white);
 	text-decoration: none;
 }
 
-.home-text-link:hover {
-	color: var(--home-link-text-hover);
+.home-icon-link:hover {
+	color: var(--highlight);
 	transition-duration: 0.5s;
 }
 
@@ -85,94 +100,90 @@ html {
 	font-weight: 600;
 }
 
-.home-ip {
-	color: var(--ip-text);
+.home-ip-text {
+	color: var(--white);
 	letter-spacing: 0.5px;
 	font-size: var(--home-ip-font-size);
 	display: inline-block;
 }
 
-.ip-highlight {
-	color: var(--ip-text-highlight);
+.home-ip-text-highlight {
+	color: var(--highlight);
 	font-weight: 600;
 }
 
-.underline {
-	background-image: linear-gradient(90deg, #FF416C, #FF4B2B);
+.home-ip-text-underline {
+	background-image: linear-gradient(90deg, var(--gradient1), var(--gradient2));
 	background-position: bottom;
 	background-size: 100% 30%;
 	background-repeat: no-repeat;
 	cursor: pointer;
 }
 
-.underline:hover {
-	background-image: linear-gradient(-90deg, #FF416C, #FF4B2B);
+.home-ip-text-underline:hover {
+	background-image: linear-gradient(-90deg, var(--gradient1), var(--gradient2));
 }
 
 #games {
-	background-color: var(--games-back-color);
+	color: var(--light-dark);
+	background-color: var(--light-gray);
 	padding-top: var(--games-margin);
 	padding-bottom: var(--games-margin);
-}
-
-.games-title {
-	text-align: center;
-	letter-spacing: 1vw;
-	font-weight: 100;
-	font-size: var(--games-title-size);
-}
-
-.games-margin {
-	margin-top: var(--games-margin);
-}
-
-.card-margin {
-	margin-right: var(--card-margin);
-	margin-left: var(--card-margin);
-	margin-bottom: var(--card-margin-bottom) !important;
 }
 
 #vote {
-	background-color: var(--vote-back-color);
-	color: var(--ip-text);
-	padding-top: var(--games-margin);
-	padding-bottom: var(--games-margin);
-}
-
-.vote-padding {
-	padding-top: var(--games-margin);
-	padding-bottom: var(--games-margin);
-}
-
-.card-back-color {
-	background-color: var(--card-back-color) !important;
-}
-
-.vote-card-margin {
-	margin-bottom: var(--card-margin-bottom) !important;
-}
-
-#staff {
-	width: 100%;
 	background-image: linear-gradient(rgba(20, 26, 35, 0.55), rgba(20, 26, 35, 0.55)), url("../assets/background-image2.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	background-attachment: fixed;
+	color: var(--white);
 	padding-top: var(--games-margin);
 	padding-bottom: var(--games-margin);
 }
 
-.white-game-title {
-	color: var(--ip-text);
+.vote-card-text-color {
+	color: var(--light-dark);
+}
+
+.vote-text-padding {
+	padding-bottom: 5vh;
+}
+
+.vote-btn-color {
+	background-color: var(--highlight) !important;
+	border-color: var(--highlight) !important;
+}
+
+#staff {
+	color: var(--light-dark);
+	background-color: var(--light-gray);
+	padding-top: var(--games-margin);
+	padding-bottom: var(--games-margin);
 }
 
 .card-img-round {
 	border-radius: 50%;
-    border-top-left-radius: 50% !important;
-    border-top-right-radius: 50% !important;
+	border-top-left-radius: 50% !important;
+	border-top-right-radius: 50% !important;
+	margin-bottom: 0.5vw;
 }
 
 #status {
+	color: var(--white);
+	background-color: var(--dark);
 	padding-top: var(--games-margin);
 	padding-bottom: var(--games-margin);
+}
+
+.card-background-color-On {
+	background-color: var(--server-on) !important;
+}
+
+.card-background-color-Off {
+	background-color: var(--server-off) !important;
+}
+
+.server-icon-status svg {
+	width: 2vw;
 }
